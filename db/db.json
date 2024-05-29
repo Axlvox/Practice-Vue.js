@@ -79,16 +79,19 @@
   ],
   "burgers": [
     {
-      "id": "1285",
-      "nome": "Isabela FakeVeggie",
-      "carne": "Veggie burger",
-      "pao": "3 Queijos",
+      "id": "8323",
+      "nome": "Fakers",
+      "carne": "Picanha",
+      "pao": "Integral",
       "opcionais": [
         "Bacon",
+        "Cebola roxa",
         "Salame",
-        "Cheddar"
+        "Cheddar",
+        "Tomate",
+        "Pepino"
       ],
-      "status": "Solicitado"
+      "status": "Em produção"
     }
   ]
 }
