@@ -11,14 +11,14 @@
                     <label for="pão">Escolha o pão:</label>
                 <select name="pão" id="pão" v-model="pao">
                     <option value="">Selecione o seu pão</option>
-                    <option v-for="pao in paes" :key="pao.id" value="pao.tipo">{{ pao.tipo }}</option>
+                    <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{ pao.tipo }}</option>
                 </select>   
                 </div>
                 <div class="input-container">
                     <label for="carne">Escolha a carne:</label>
                 <select name="carne" id="carne" v-model="carne">
                     <option value="">Selecione o tipo de carne</option>
-                    <option v-for="carne in carnes" :key="carne.id" value="carne.tipo">{{ carne.tipo }}</option>
+                    <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">{{ carne.tipo }}</option>
                 </select>   
                 </div>
                 <div id="opcionais-container" class="input-container">
@@ -86,18 +86,19 @@ export default {
 
         const res = await req.json();
 
-        this.msg = "Pedido realizado com sucesso"
+        this.msg = "Pedido #" + res.id + " realizado com sucesso";
 
         setTimeout(() => this.msg="", 3000);
 
         this.nome = "",
         this.carne = "",
         this.pao = "",
-        this.opcionais = ""
+        this.opcionais = []
         }
     },
     mounted() {
         this.getIngredients();
+
     },
     components: {
         Message
