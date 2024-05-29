@@ -168,6 +168,17 @@
         "Cheddar"
       ],
       "status": "Solicitado"
+    },
+    {
+      "id": "fc2b",
+      "nome": "Isabela",
+      "carne": "carne.tipo",
+      "pao": "pao.tipo",
+      "opcionais": [
+        "Bacon",
+        "Salame"
+      ],
+      "status": "Solicitado"
     }
   ]
 }
