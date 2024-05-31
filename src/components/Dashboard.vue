@@ -1,6 +1,6 @@
 <template>
+            <Message :msg="msg" v-show="msg" />
     <div id="burger-table">
-        <Message :msg="msg" v-show="msg" />
         <div id="burger-table-heading">
             <div class="order-id">#</div>
             <div>Cliente:</div>
@@ -41,7 +41,8 @@ export default {
         return {
         burgers: null,
         burger_id: null,
-        status: []
+        status: [],
+        msg: null
         }
     },
     methods: {
@@ -62,7 +63,7 @@ export default {
             const res = await req.json();
             this.getPedidos();
             this.msg = `Pedido #${res.id} deletado com sucesso`;
-            setTimeout(() => this.msg="", 3000);
+            setTimeout(() => this.msg = "", 3000);
         },
         async updatedBurger(event, id) {
             const option = event.target.value;
@@ -74,7 +75,7 @@ export default {
             });
 
             const res = await req.json();
-            this.msg = `Pedido #${res.id} atualizado com sucesso`;
+            this.msg = `Pedido #${res.id} foi atualizado para ${res.status}`;
             setTimeout(() => this.msg="", 3000);
         }
     },

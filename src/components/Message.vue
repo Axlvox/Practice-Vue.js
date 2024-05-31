@@ -13,9 +13,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .message-container {
     color: #004085;
+    text-align: center;
     background-color: #CCE5FF;
     border: 2px solid #88DAFF;
     border-radius: 5px;
